@@ -1,0 +1,413 @@
+@media screen and (max-width:1020px){
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #054270;
+        font-size: 40px;
+        font-weight: 600
+    }
+    .banner{
+        width:100%;
+        height: 500px;
+    }
+    .logo{
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        margin-top: -150px;
+        box-shadow: 0px 0px 2px 3px #ffffff49 ;
+    }
+    .principal{
+        background-color: #8888881f;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .text-principal{
+        font-size: 70px;
+    }
+    .p-principal{
+        font-size: 50px;
+        font-weight: 500;
+    }
+    nav{
+        width: 100%;
+        height: 200px;
+    }
+    .busca{
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        padding-top: 40px;
+        border-radius: 7px;
+        
+    }
+    .menu{
+        height: 250px;
+    }
+    .image{
+        display: flex;
+        align-items: center;
+        border: 1px solid #00000052;
+        border-radius: 7px;
+        margin-left: 20px;
+        height: 87px;
+        background-color: rgba(0, 0, 0, 0.212);
+    }
+    .lupa{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .campo{
+        width: 700px;
+        height: 80px;
+        border-radius: 0px 7px 7px 0px;
+        border: none;
+        margin-left: 45px;
+        font-size: 50px;
+    }
+    .scroll{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 2400px;
+        height: 150px;
+        margin: auto;
+    }
+    .itens{
+        font-family: "Noto Serif", serif;
+      font-optical-sizing: auto;
+      font-size: 60px;
+      text-shadow: 2px 2px  #00000011;
+      font-weight: weight;
+      margin-top: -30px;
+      margin-left: 30px;
+        cursor: pointer;
+    }
+    .itens:hover{
+        box-shadow: none;
+        color: rgb(233, 18, 18);
+        font-size: 63px;
+    }
+    .btn0{
+        background-color: #0d8cfc;
+        border: none;
+        border-radius: 8px;
+        width: 270px;
+        height: 90px;
+        font-size: 60px;
+        margin-right: 45px;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.516);
+        box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.396);
+        cursor: pointer;
+    }
+   .secao{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    }
+    .p_verde{
+        display: flex;
+        justify-content: space-between;
+        width: 1150px;
+        height: 400px;
+        border-radius: 5px;
+        box-shadow:  0px  1px 2px #888;
+        border: 1px solid #0000001f;
+        margin-top: 30px;
+        margin-left: 30px;
+        font-size: 15px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    .titulo h1{
+        color: rgb(255, 0, 0);
+        margin-left: 10px;
+        font-size: 65px;
+    }
+    .produt{
+        font-size: 50px;
+        font-weight: 800;
+    }
+    .port-verd{
+        width: 400px;
+        height: 100%;
+        border-radius: 5px;
+        
+    }
+    .secao h3{
+        color: green;
+        font-size: 45px;
+    }
+    strong{
+        font-size: 45px;
+    }
+    .conteudo{
+        margin-left: 20px;
+        height: 100%;
+        width: 720px;
+    }
+    .fixado{
+        height: 250px;
+        padding-top: 5px;
+        position: fixed;
+        top: 0;
+    }
+    /* pop-up  */
+    .adicional{
+        width: 100%;
+        height: 100%;
+        background-color: #0000006e;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .popup{
+        width: 1130px;
+        height: 85%;
+        background-color: #fff;
+        border-radius: 7px;
+        margin-top: 100px;
+    }
+    .divisao{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        box-shadow: 0px 2px  #bebcbc;
+        width: 1100px;
+        height: 300px;
+        margin: auto;
+    }
+    .title{
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 3px red;
+        background-color: #635b5b2f;
+    }
+    .title h1{
+        font-size: 68px;
+        margin: 15px;
+    }
+    .sair{
+        width: 95px;
+        margin: 7px;
+        cursor: pointer;
+    }
+    .infor{
+        height: 200px;
+        
+        }
+    .infor h1{
+        margin-top: 30px;
+            font-size: 70px;
+    }
+    .infor p{
+        margin-top: 30px;
+        font-size: 55px;
+            color: red;
+    }
+    .quant{
+            display: flex;
+            justify-content: space-between;
+           width: 300px;
+        }
+        .add{
+            width: 95px;
+            height: 95px;
+            background-color: rgba(255, 0, 0, 0.767);
+            border-radius: 100%;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .remo{
+            width: 95px;
+            height: 95px;
+            background-color: #777;
+            border-radius: 100%;
+            cursor: pointer;
+            display: none;
+        }
+        .resul{
+            width: 80px;
+            height: 75px;
+            text-align: center;
+            font-size: 55px;
+            border-bottom: 1px solid #ff0808;
+            color: #ff0808f8;
+            display: none;
+        }
+        .rodape-popup{
+            padding-top: 15px;
+            margin: auto;
+            width: 1100px;
+        }
+        .rodape-popup h1{
+            font-size: 60px;
+        }
+        .soma{
+            display: flex;
+            justify-content: space-around;
+            width: 290px;
+            height: 140px;
+            background-color: #f24405bb !important;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .soma h3{
+            font-size: 70px;
+            font-weight: 500;
+            color: #fff;
+            padding-top: 7px;
+        }
+        .dolar{
+            font-size: 70px;
+            font-weight: 500;
+            color: #fff;
+            padding-top: 8px;
+        }
+        .comprar{
+            width: 450px;
+            height: 140px;
+            background-color: #F24405;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+        
+        }
+        .comprar h3{
+            font-size: 75px;
+            font-weight: 600;
+            color: #fff;
+             margin-top: 7px;
+        }
+        .imp{
+            width: 950px;
+            height: 140px;
+            border-radius: 7px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 56px;
+            border:  1px solid #888;
+        }
+        /* formulario */
+        .corpo-formulario{
+            position: fixed;
+            display: none;
+            background-color: #000000d8;
+            width: 100%;
+            height: 100%;
+            padding-top: 10%;
+        }
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            width: 1150px;
+            height: 1500px;
+            background-color: #0d8cfc7c;
+            box-shadow: 1px 2px 2px 1px #0f0f0f69;
+            margin-top: 180px;
+            border-radius: 7px;
+        }
+        .place{
+            font-size: 76px;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000;
+            width: 1100px;
+            height: 180px;
+            background: #ffffff;
+            margin-left: 20px;
+            margin-bottom: 90px;
+            border: none;
+            box-shadow: 1px 1px 1px 1px #00000036;
+            border-radius: 20px;
+        }
+        .labe{
+            display: none;
+            font-size: 50px;
+            color: rgba(255, 38, 0, 0.934);
+            margin-left: 35px;
+           
+        }
+        .login{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 150px;
+    font-weight: 580;
+    text-align: center;
+    color:#f9fafa;
+    text-shadow: 1px 1px #00000094;
+    padding-bottom: 30px;
+    }
+    .sair1{
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 88%;
+    margin-top: 20px;
+    cursor: pointer;
+    }
+    .enviar{
+        background-color:#1457ae;
+        border: none;
+        box-shadow: 1px 1px 2px 1px #00000054;
+        border-radius: 20px;
+        width: 1100px;
+        height: 180px;
+        margin-top: 50px;
+        margin-left: 20px;
+        color: #fff;
+        font-size: 80px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    /* Tabela Controle de Venda */
+    .headePagina{
+        align-items: center;
+        text-align: center;
+        background-color: rgb(249, 209, 8);
+        height: 200px;
+        display: flex;
+        font-size: 60px;
+        font-weight: 900;
+        justify-content: space-around;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .secaoPagina{
+        width: 1150px;
+        height: 1530px;
+        margin: auto;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.174);
+    }
+    td{
+        font-size: 38px;
+        background-color: rgba(249, 137, 137, 0.114);
+    }
+    .table-pc{
+        display: none;
+    }
+    .linha1{
+        background-color:  rgb(250, 219, 65);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 54px;
+        width: 190px;
+        text-align: center;
+    }
+    .linha2{
+        background-color:  rgb(250, 219, 65);
+        font-size: 30px;
+    }
+    .linha{
+        margin: auto;
+         background-color:  rgb(250, 219, 65);
+         text-align: center;
+         width: 150px;
+         height: 50px;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 50px; 
+     }
+    }  

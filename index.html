@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIG DELICIOUS</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="script/index.js" defer></script>
+    
+</head>
+<body>
+    <article class="controle" id="control">
+        <header class="headePagina">
+            <div id="btn02" onclick="fechar()"><img src="imagens/svg-voltar.svg" alt=""></div>
+            <div class="vazia"></div>
+            <div><h1>Controle de Venda</h1> </div>
+            <div class="btn0" onclick="fechar()">Voltar</div>
+            
+           </header> 
+           <main class="mainPagina">
+           <section class="secaoPagina">
+            <table id="tablo">
+                <thead>
+                <tr>
+                    <th class="nome">Nome</td>
+                    <th class="nome">Celular</td>
+                    <th class="linha1">
+                       Produto 
+                    </th>
+                    <th class="linha">
+                        Cor
+                    </th>
+                    <th class="linha">
+                        Tamanho
+                    </th>
+                    <th class="linha">
+                        Quantidade
+                    </th>
+                    <th class="linha">
+                        Valor
+                    </th>
+                </tr>
+                </thead>
+                <tbody id="tb">
+            </tbody>
+            </table>
+            
+        </section>
+           </main>
+           <footer class="rodapeControle"></footer>
+        </article>
+
+    <div class="adicional" id="add">
+        <div class="popup">
+            <div class="title">
+                <div><h1>ADICIONA AO CARRINHO</h1></div> 
+            <div><img class="sair" onclick="sai()" src="imagens/sair.svg" alt=""></div> </div>
+            <div class="divisa">
+                <div class="divisao">
+                    <table class="seu1">
+                    <tr>
+                    <th class="teu">
+                        Produto
+                    </th>
+                    <th class="teu"> 
+                        Descriçâo
+                    </th>
+                    <th class="teu">
+                        Quantidade
+                    </th>
+                </tr>
+            </table>
+            <table id="seu1">
+                <tbody id="tb">
+            </tbody>
+        </table>
+            <div class="xave">
+                <div class="soma" > <div class="dolar">R$</div><h3 id="soma" class="some"></h3></div>
+                <div class="comprar" onclick="save()" id="compr"><h3>Finalizar </h3></div>
+                
+            </div>
+            <div class="rodape-popup">
+                <div><h1>Sabores</h1></div>
+                <input id="obs" class="imp" type="text" placeholder="Ex: (Pastel de frango ou Carne)">
+            </div>
+        </div>
+            </div>
+                </div>
+        </tr>
+
+
+            <!-- <div class="divisao">
+                <div class="infor"><h1 class="fume">Verde</h1>
+                    <P>+R$0 </P></div>
+                <div class="quant">
+                    <div></div>
+                        <img class="remo" id="remo1" src="imagens/remove.svg" alt="">
+                    <div  class="resul" id="incluir1">0</div>
+        <img class="add" id='inclui1' src="imagens/add.svg"></div>
+            </div>
+            <div class="divisao">
+                <div class="infor"><h1 class="fume">Incolor</h1>
+                    <P>+R$0 </P></div>
+                <div class="quant">
+                    <div></div>
+                    <img class="remo" id="remo2"  src="imagens/remove.svg" alt="">
+            <div class="resul" id="incluir2">0</div>
+                <img class="add" id='inclui2' src="imagens/add.svg"></div>
+            </div>-->
+            
+            
+            
+        </div>
+    </div>  
+           <div class="duvida-geral">
+            <div class="duvida">
+                <img class="negativo" onclick="negativo()" src="imagens/sair.svg" alt="sair">
+                <p>Deseja adiciona esse item ao carrinho?</p>
+                <table class="seu">
+                    <tr>
+                    <th class="teu">
+                        Produto
+                    </th>
+                    <th class="teu"> 
+                        Descriçâo
+                    </th>
+                    <th class="teu">
+                        Quantidade
+                    </th>
+                </tr>
+            </table>
+                <button class="positivo" onclick="positivo()">Ok</button>
+               </div>
+           </div>
+<main class="pageClient">
+    <!-- formulario de inscrição -->
+    <div class="corpo-formulario">
+        <div class="formulario">
+            <img class="sair1" onclick="sair1()" src="imagens/sair1.svg" alt="sair">
+            <h3 class="login">LOGIN</h3>
+            <label class="labe" id="labe">E-mail invalido*</label>
+            <input class="place" id="email" type="text" placeholder="E-mail">
+            <label class="labe" id="labe1">Senha invalida*</label>
+            <input class="place" id="senha" type="password" placeholder="Senha">
+            <input onclick="enviar()" class="enviar" value="Entrar"> 
+        </div>
+    </div>
+
+    <div class="popupAdress-principal">
+        <div class="popupAdress">
+            <img class="sair-popup" onclick="sairPopup()" src="imagens/sair.svg" alt="sair">
+            <h2>Digite Seu Endereço</h2>
+            <form class="popupA" onsubmit="popupAdress(); return false;">
+            <input class="textInput" type="text" id="Rua" placeholder="Rua, Benedito Reis, N°61" required>
+            <input class="textInput" type="text" id="Bairro" placeholder="Bairro: Altamira" required>
+            <button class="btn-Adress" type="submit">Enviar</button>
+        </form>
+        </div>
+    </div>
+    <!-- cabeçalho da pagina principal -->
+    <header class="cabeca">
+        <img class="banner" src="imagens/layout.jpg" alt="imagem do banner">
+        <div class="txt-logo">
+            <img class="logo" src="imagens/BIG DELICIOUS.png" alt=" logotipo">
+            <h2 class="text-principal">
+                <br> BIG DELICIOUS
+            </h2>
+            <p class="sabores-texto">Sabores que conquistam! </p>
+        </div>
+        
+    </header>
+    
+    <!-- menu da da pagina principal -->
+    <nav class="menu" id="meno">
+        <p class="loj">Loja</p> <p class="atendimento">Fechado</p>
+        <div class="busca">
+            <div class="image"><img class="lupa" src="imagens/busca.svg" alt="lupa">
+            <input class="campo" type="text" placeholder="Buscar produtos"></div>
+           <button class="btn01" onclick="entrar()">Entrar </button>
+           <div class="carrinho" onclick="escolha()"> <img src="imagens/carrinho.svg" alt=""> <div class="car">0</div></div>
+        </div>
+            <div class="scroll">
+            <div class="itens" id="#port">COMBO</div>
+            <div class="itens1" id="#janel">MAiS VENDIDOS</div>
+            <div class="itenss" id="#janel">+VENDIDOS</div>
+            <div class="itens" id="#box">BEBIDAS</div>
+            <div class="itens" id="#espelho">SALGADOS</div>
+            <div class="itens" id="#acessorio">SOBREMESAS</div>
+            </div>
+        </nav>
+
+        <!-- <div class="whatsapp">
+            <label for="whatsapp">Digite seu número de WhatsApp:</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(DDD) 9XXXX-XXXX" required>
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">Li e aceito a <a href="page/politica-privacidade.html" target="_blank"> Política de Privacidade </a>.</label>
+            <button type="submit">Enviar</button>
+        </div> -->
+<!-- corpo principal da pagina -->
+    <main class="principal">
+        <div class="carrossel">
+            <div class="slides">
+                <img class="slide active" src="imagens/slide3.png" alt="">
+                <img class="slide" src="imagens/gessy.png" alt="slide gessy">
+                <img class="slide" src="imagens/maria.png" alt="slide maria">
+                <img class="slide" src="imagens/edilene.png" alt="slide edilene">
+            </div>
+            <button id="btnCarrossel" class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button id="btnCarrossel" class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    
+        <div class="titulo" id="port" >
+            <img src="imagens/seta.svg" alt="seta ">
+            <h1>COMBO</h1>
+        </div>
+
+        <section class="secao">
+            
+
+            <div class="p_verde" id="evento" >
+                <div class="conteudo">
+                    <h1 class="produt">COMBO PASTEL</h1>
+                    <p class="tam"> 
+                        3 pastel e Uma coca cola de 1 litros <hr>
+                    </p><p>VALOR: </p> 
+                    <br>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">35</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/combo.jpg" alt="porta fume">
+            </div>
+            <div class="p_verde" id="evento" >
+                <div class="conteudo">
+                    <h1 class="produt">COMBO FAMILIA:</h1>
+                      <p class="tam"> 4 Coxinha e Uma coca cola 2 litros </p><hr>
+                        <strong>VALOR:</strong> 
+                    <br>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">30</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/coxinha combo.jpg" alt="porta fume">
+            </div>
+        </section>
+    
+        <section class="secao">
+            <div class="_verde" id="evento" >
+                <div class="conteudo">
+                    <h1 class="produt">COMBO MINI PIZZA</h1>
+                    <p class="tam"> 2 mini pizzas mais uma porção <br> <br> de batatas fritas e um Guarana em lata</p> 
+                    <b> <hr>
+                        <strong>VALOR:</strong>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">27</h3></div>
+                        <p class="esgotado">ESGOTADO</p>
+                </div>
+                
+                <img class="port-verd" src="imagens/Sem título.png" alt="porta fume">
+            </div>
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">COMBO MATA BROCA</h1>
+                    <p class="tam">
+                      Uma mini torta de frango mais 
+                       2 <br><br> enroladinha de salsicha e <br> <br> um guarana de 1 litro</p>
+                      <hr> <strong>VALOR:</strong> 
+                      <div class="grana"><p class="cifrao">R$</p><h3 class="valor">23</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/Sem  nome.png" alt="porta fume">
+            </div>
+        </section>
+
+        <div class="titulo" id="janel">
+            <img src="imagens/seta.svg" alt="seta ">
+            <h1>MAIS VENDIDOS</h1>
+        </div>
+        <section class="secao" >
+            <div class="_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">BATATA FRITAS </h1>
+                    <P> PORÇÃO <hr>
+                        <strong>VALOR:</strong> <p class="tam"></P> </P>
+                            <br>
+                            <div class="grana"><p class="cifrao">R$</p><h3 class="valor">12</h3></div>
+                            <p class="esgotado">ESGOTADO</p></div>
+                <img  class="port-verd" src="imagens/BATATA.jpg" alt="">
+            </div>
+                <div class="p_verde" id="evento" >     
+                    <div class="conteudo">
+                    <h1 class="produt">PASTEL MASSA COZIDA</h1>
+                    <p class="tam">  SABORES: CARNE; QUEIJO E PRESUNTO; <br> 
+                        <br> 
+                        FRANGO; 
+                         <br> <br>
+                            130g
+                        </p><hr>
+                        <strong>VALOR</strong> <p class="tam"> </P> </P>
+                    
+                            <div class="grana"><p class="cifrao">R$</p><h3 class="valor">5</h3></div>
+                </div>
+                <img class="port-verd"  src="imagens/pastel de massa cozida batata.jpg" alt=""></div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">COXINHA DE FRANGO</h1>
+                    <P>   <p class="tam"> 
+                        150g
+                    </P> <hr>
+                        <strong>VALOR</strong></P>
+                    <br>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">5</h3></div>
+                </div>
+                <img class="port-verd"  src="imagens/COXINHA 1.webp" alt="">
+            </div>
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">ENROLADINHO DE SALSICHA</h1>
+                    <P> <p class="tam"> 
+                        130g
+                    </P>  <hr>
+                        <strong>VALOR</strong> <p class="tam"></P> </P>
+                    <br>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">5</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/enroladinho de sasicha.jpg" alt="">
+            </div>
+        </section>
+        <div class="titulo" id="box">
+            <img src="imagens/seta.svg" alt="seta ">
+            <h1>BEBIDAS</h1>
+        </div>
+        <section class="secao">
+            
+                <div class="p_verde" id="evento">
+                    <div class="conteudo">
+                        <h1 class="produt">REFRIGERANTE GUARANA 2 LITROS</h1>
+                        <P><hr>
+                            <strong>VALOR</strong> <p class="tam"></P> </P>
+                        <br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">12</h3></div>
+                    </div>
+                    <img class="port-verd"  src="imagens/guarana 1 litro.jpg" alt="">
+                </div>
+                <div class="p_verde" id="evento">
+                    <div class="conteudo">
+                        <h1 class="produt">REFRIGERANTE GUARANA 1 LITROS</h1>
+                        <P> <hr>
+                            <strong>VALOR</strong> <p class="tam"></P> </P>
+                        <br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">8</h3></div>
+                    </div>
+                    <img class="port-verd" src="imagens/guarana 1 litro.jpg" alt="">
+                </div>
+        </section>
+
+        <section class="secao">
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt"> REFRIGERANTE GUARANA EM LATA</h1> </h1>
+                    <P> <p class="tam"> 
+                        350ml
+                    </p><hr>
+                        <strong>VALOR:</strong> <p class="tam"></P> </P>
+                    <br>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">5</h3></div>
+                </div>
+                <img class="port-verd"  src="imagens/gurana lata.png" alt="">
+            </div>
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">LIMONETA H2OH!</h1>
+                    <P> <p class="tam"> 
+                        500ml
+                    </p> <hr> <strong>VALOR:</strong> <p class="tam"></P>
+                    <br>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">6</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/limoneta.png" alt="">
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="p_verde" id="evento">
+            <div class="conteudo">
+                    <h1 class="produt">REFRIGERANTE COCA COLA 2 LITROS</h1>
+                    <P> <hr> <strong>VALOR:</strong> <p class="tam" ></P>
+                    <br>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">13</h3></div>
+            </div>
+                <img class="port-verd"  src="imagens/coca de 1 litro.jpg" alt="">
+            </div>
+
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">REFRIGERANTE COCA COLA 1 LITROS</h1>
+                    <P> <hr>  <strong>VALOR</strong> <p class="tam"> </P> <br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">8</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/coca de 1 litro.jpg" alt="">
+            </div>
+
+        </section>
+
+        <section class="secao">
+            <div class="p_verde" id="evento">
+            <div class="conteudo">
+                    <h1 class="produt">REFRIGERANTE COCA COLA EM LATA</h1>
+                    <P> <p class="tam"> 
+                        350ml
+                    </p> <hr> <strong>VALOR</strong> <p class="tam"> </P> <br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">5</h3></div>
+            </div>
+                <img class="port-verd"  src="imagens/latinha coca.jpg" alt="">
+            </div>
+        </section>
+
+        <div class="titulo">
+            <img src="imagens/seta.svg" alt="seta ">
+            <h1>SALGADOS</h1>
+        </div>
+        <section class="secao" id="espelho">
+            
+                <div class="p_verde" id="evento">
+                    <div class="conteudo">
+                        <h1 class="produt">MINI PIZZAS</h1>
+                        <p class="tam">  CARNE E QUEIJO; QUEIJO E PRESUNTO; 
+                            <br> <br> FRANGO E QUEIJO; CALABRESA E QUEIJO</P>
+                      <hr>  <strong>VALOR</strong> <br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">7</h3></div>
+                    </div>
+                    <img class="port-verd"  src="imagens/mini pizzas.jpg" alt="">
+                </div>
+                <div class="p_verde" id="evento">
+                    <div class="conteudo">
+                        <h1 class="produt">ENROLADINHO <br> QUEIJO E PRESUNTO </h1>
+                        <P> </P>
+                       <hr> <strong>VALOR</strong> <p class="tam"> </P> </P> <br>
+                        <div class="grana"><p class="cifrao">R$</p> <h3 class="valor">5</h3></div>
+                    </div>
+                    <img class="port-verd" src="imagens/enroladinho-presunto-queijo.jpg" alt="">
+                </div>
+        </section>
+
+        <section class="secao" id="espelho">
+            
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">MINI TORTA DE FRANGO <br>
+                    </h1>
+                    <P> </P>
+                    <hr> <strong>VALOR</strong> <p class="tam"> </P> </P> 
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">7</h3></div>
+                </div>
+                <img class="port-verd"  src="imagens/torta de frango.jpg" alt="">
+            </div>
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">PÃES RECHEADOS <br> QUEIJO E PRESUNTO</h1>
+                    <P> <hr> <p class="tam">250g </P></P>
+                    <strong>VALOR</strong>  </P>  <br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">8</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/recheado.jpg" alt="">
+            </div>
+    </section>
+
+        <section class="secao" id="acessorio">
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">COXINHA DE FRANGO</h1>
+                    <P> <hr> </P>
+                    <strong>VALOR</strong> <p class="tam"> </P> </P>  <br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">5</h3></div>
+                </div>
+                <img class="port-verd"  src="imagens/coxinha de frango.jpg" alt="">
+            </div>
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">PASTEL DE FEIRA</h1>
+                    <p class="tam">    SABORES: CARNE; QUEIJO E PRESUNTO; <br> <br> FRANGO;
+                         CARNE E QUEIJO; FRANGO E QUEIJO.</P>
+                   <hr> <strong>VALOR</strong>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">10</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/PASTEL FEIRA.jpg" alt="">
+            </div>
+        </section>
+
+        <div class="titulo">
+            <img src="imagens/seta.svg" alt="seta "> 
+             <h1> SOBREMESA </h1>
+        </div>
+
+        <section class="secao">
+            <div class="_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">SALADA DE FRUTAS</h1>
+                    <P> <hr>
+                        <p class="tam"> 
+                            250g
+                        </p> </P>
+                    <strong>VALOR</strong> <p class="tam"> </P> </P>  <br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">12</h3> </div>
+                        <p class="esgotado">ESGOTADO</p>
+            </div>
+
+                 <img class="port-verd"  src="imagens/SALADA DE FRUTA1.jpg" alt="">
+            </div>
+    
+            <div class="p_verde" id="evento">
+                <div class="conteudo">
+                    <h1 class="produt">BOLO NO POTE </h1>
+                    <P> <hr> 
+                        <p class="tam"> 
+                            250g
+                        </p></P>
+                    <strong>VALOR</strong> <p class="tam"> </P> </P><br>
+                        <div class="grana"><p class="cifrao">R$</p><h3 class="valor">12</h3></div>
+                </div>
+                <img class="port-verd" src="imagens/BOLO NO POTE.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="p_verde" id="evento">
+            <div class="conteudo">
+                    <h1 class="produt">PUDIM NO POTE</h1>
+                    <P>  <hr>
+                        <p class="tam"> 
+                            250g
+                        </p>
+                        <strong>VALOR</strong> </P>
+                    <br>
+                    <div class="grana"><p class="cifrao">R$</p><h3 class="valor">12</h3></div>
+            </div>
+                <img class="port-verd"  src="imagens/pudim no pote.jpg" alt="">
+            </div>
+        </section>
+
+    </main>
+   
+    <footer class="rodape">
+        <div>
+         
+        </div>
+        <div class="copy">
+            &copy;2024 Big Delicious. Todos os direitos reservados
+        </div>
+    </footer>
+</main>  
+<!-- <script src="script/local.js"></script> -->
+</body>
+</html>
