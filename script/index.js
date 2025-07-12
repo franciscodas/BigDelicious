@@ -33,8 +33,6 @@ let novopro;
 // if (window.location.protocol !== 'https:') {
 //     window.location.href = `https://${window.location.host}${window.location.pathname}`;
 // }
-
-
 /*chama a função fixa scroll ----*/
 window.onscroll=function(){fixar();};
 
@@ -305,13 +303,17 @@ horario()
 
 rolagem.forEach(scrol =>{
     scrol.addEventListener("click", interar);
+    
 })
 function interar(event){
     let conteudo = event.target;
     let conca = conteudo.getAttribute('id');
     let sesao =document.querySelector(conca).offsetTop
+    
     window.scroll({
-        top: sesao -100})
+        top: sesao -100,
+        behavior: "smooth"})
+
 };
 
 
@@ -480,3 +482,37 @@ car.style.display = 'none'
     removerChave('db_list');
     console.log(resumo)
   }
+
+  // Adiciona destaque vermelho no texto do item correspondente à seção visível
+  window.addEventListener("scroll", () => {
+    const itensMenu = document.querySelectorAll(".scroll div");
+  
+    itensMenu.forEach(item => {
+      const idComHash = item.getAttribute("id");     // "#port"
+      const idSecao = idComHash.replace("#", "");    // "port"
+      const secao = document.getElementById(idSecao); // <div id="port">
+  
+      if (!secao) return;
+  
+      const topo = secao.offsetTop - 120;  // margem de ajuste
+      const fundo = topo + secao.offsetHeight;
+      const scrollY = window.scrollY;
+  
+      if (scrollY >= topo && scrollY < fundo) {
+        item.classList.add("ativo");
+      } else {
+        item.classList.remove("ativo");
+      }
+     
+
+      // Faz o item ativo rolar até o centro visível do menu
+if (scrollY >= topo && scrollY < fundo) {
+    item.classList.add("ativo");
+    item.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  } else {
+    item.classList.remove("ativo");
+  }
+    });
+  });
+  
+  

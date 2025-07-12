@@ -173,17 +173,19 @@
     
     <!-- menu da da pagina principal -->
     <nav class="menu" id="meno">
-        <p class="loj">Loja</p> <p class="atendimento">Fechado</p>
+        <div class="image">
+            <img class="lupa" src="imagens/BIG DELICIOUS.png" alt="lupa">
+            <div><p class="loj">Loja</p> <p class="atendimento">Fechado</p></div>
+        </div>
         <div class="busca">
-            <div class="image"><img class="lupa" src="imagens/busca.svg" alt="lupa">
-            <input class="campo" type="text" placeholder="Buscar produtos"></div>
+            <div></div> <div></div>
            <button class="btn01" onclick="entrar()">Entrar </button>
            <div class="carrinho" onclick="escolha()"> <img src="imagens/carrinho.svg" alt=""> <div class="car">0</div></div>
         </div>
-            <div class="scroll">
+            <div class="scroll" id="scroll">
             <div class="itens" id="#port">COMBO</div>
             <div class="itens1" id="#janel">MAiS VENDIDOS</div>
-            <div class="itenss" id="#janel">+VENDIDOS</div>
+            <div class="itenss" id="#janel1">+VENDIDOS</div>
             <div class="itens" id="#box">BEBIDAS</div>
             <div class="itens" id="#espelho">SALGADOS</div>
             <div class="itens" id="#acessorio">SOBREMESAS</div>
@@ -202,20 +204,20 @@
         <div class="carrossel">
             <div class="slides">
                 <img class="slide active" src="imagens/slide3.png" alt="">
-                <img class="slide" src="imagens/gessy.png" alt="slide gessy">
-                <img class="slide" src="imagens/maria.png" alt="slide maria">
-                <img class="slide" src="imagens/edilene.png" alt="slide edilene">
+                <img class="slide" src="imagens/hamb.png" alt="slide gessy">
+                <img class="slide" src="imagens/piz.png" alt="slide maria">
+                <img class="slide" src="imagens/cox.png" alt="slide edilene">
             </div>
             <button id="btnCarrossel" class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button id="btnCarrossel" class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     
-        <div class="titulo" id="port" >
+        <div class="titulo" id="port" style="height: 24px;">
             <img src="imagens/seta.svg" alt="seta ">
             <h1>COMBO</h1>
         </div>
 
-        <section class="secao">
+        <section class="secao" id="port">
             
 
             <div class="p_verde" id="evento" >
@@ -241,7 +243,7 @@
             </div>
         </section>
     
-        <section class="secao">
+        <section class="secao" id="port">
             <div class="_verde" id="evento" >
                 <div class="conteudo">
                     <h1 class="produt">COMBO MINI PIZZA</h1>
@@ -271,7 +273,7 @@
             <img src="imagens/seta.svg" alt="seta ">
             <h1>MAIS VENDIDOS</h1>
         </div>
-        <section class="secao" >
+        <section class="secao" id="janel1">
             <div class="_verde" id="evento">
                 <div class="conteudo">
                     <h1 class="produt">BATATA FRITAS </h1>
@@ -299,7 +301,7 @@
             </div>
         </section>
 
-        <section class="secao">
+        <section class="secao" id="janel">
             <div class="p_verde" id="evento">
                 <div class="conteudo">
                     <h1 class="produt">COXINHA DE FRANGO</h1>
@@ -329,7 +331,7 @@
             <img src="imagens/seta.svg" alt="seta ">
             <h1>BEBIDAS</h1>
         </div>
-        <section class="secao">
+        <section class="secao" >
             
                 <div class="p_verde" id="evento">
                     <div class="conteudo">
@@ -353,7 +355,7 @@
                 </div>
         </section>
 
-        <section class="secao">
+        <section class="secao" id="box">
             <div class="p_verde" id="evento">
                 <div class="conteudo">
                     <h1 class="produt"> REFRIGERANTE GUARANA EM LATA</h1> </h1>
@@ -379,7 +381,7 @@
             </div>
         </section>
 
-        <section class="secao">
+        <section class="secao" id="box">
             <div class="p_verde" id="evento">
             <div class="conteudo">
                     <h1 class="produt">REFRIGERANTE COCA COLA 2 LITROS</h1>
@@ -401,7 +403,7 @@
 
         </section>
 
-        <section class="secao">
+        <section class="secao" id="box">
             <div class="p_verde" id="evento">
             <div class="conteudo">
                     <h1 class="produt">REFRIGERANTE COCA COLA EM LATA</h1>
@@ -414,7 +416,7 @@
             </div>
         </section>
 
-        <div class="titulo">
+        <div class="titulo" id="espelho">
             <img src="imagens/seta.svg" alt="seta ">
             <h1>SALGADOS</h1>
         </div>
@@ -486,12 +488,12 @@
             </div>
         </section>
 
-        <div class="titulo">
+        <div class="titulo" id="acessorio">
             <img src="imagens/seta.svg" alt="seta "> 
              <h1> SOBREMESA </h1>
         </div>
 
-        <section class="secao">
+        <section class="secao" id="acessorio">
             <div class="_verde" id="evento">
                 <div class="conteudo">
                     <h1 class="produt">SALADA DE FRUTAS</h1>
@@ -521,7 +523,7 @@
             </div>
         </section>
 
-        <section class="secao">
+        <section class="secao" >
             <div class="p_verde" id="evento">
             <div class="conteudo">
                     <h1 class="produt">PUDIM NO POTE</h1>
@@ -540,11 +542,15 @@
     </main>
    
     <footer class="rodape">
-        <div>
-         
-        </div>
         <div class="copy">
             &copy;2024 Big Delicious. Todos os direitos reservados
+        </div>
+        
+        <div class="logoEmpresa">
+            <div></div>
+            <p><a href="https://instagram.com/art.bytestudio" target="_blank">Desenvolvido por</a>
+            <img class="desenvolvido" src="imagens/artbiteazul.png" alt="empresa"></p>
+            <div></div>
         </div>
     </footer>
 </main>  
