@@ -38,9 +38,12 @@ window.onscroll=function(){fixar();};
 
 /*----função scroll do menu fixado no topo--------*/
 function fixar(){
+    let logo = document.querySelector(".image")
     if(window.pageYOffset >= navfixa){
         nav.classList.add("fixado");
-    }else{nav.classList.remove("fixado")}
+        logo.style.display = "block";
+    }else{nav.classList.remove("fixado");
+        logo.style.display = "none";}
  };
 
  /* ---------butão fechar do popup--------*/
@@ -174,7 +177,7 @@ let calculo;
 let chat;
 
 function horario(){
-    const status = document.querySelector('.menu .atendimento');
+    const status = document.querySelector('.banner .atendimento');
     const data = new Date();
     const dias = data.getDay();
     const hora = data.getHours();
@@ -186,7 +189,7 @@ function horario(){
         status.style.backgroundColor  = "green";
         status.innerHTML = 'Aberto'
     }else {
-        status.style.backgroundColor = "red";
+        
         status.innerHTML = 'Fechado';
     }
 }
@@ -509,6 +512,7 @@ car.style.display = 'none'
 if (scrollY >= topo && scrollY < fundo) {
     item.classList.add("ativo");
     item.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    
   } else {
     item.classList.remove("ativo");
   }
