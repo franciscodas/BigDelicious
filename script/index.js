@@ -480,7 +480,7 @@ car.style.display = 'none'
     
     
     var mensagem = encodeURIComponent(resumo);
-    var linkzap = `https://wa.me/5594991502902?text=${mensagem}`;
+    var linkzap = `https://wa.me/5594984333958?text=${mensagem}`;
     window.location.href = linkzap; 
     removerChave('db_list');
     console.log(resumo)
