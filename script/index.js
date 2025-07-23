@@ -427,6 +427,50 @@ let input4
 let resumo;
 let itens;
 const popupPrincipal = document.querySelector(".popupAdress-principal");
+
+//   função que é chamda pelo Qr-code
+function QrCode(){
+    vix()
+    sairPopup()
+    formatarDados();
+    lerClient()
+    var preco = tot;
+    var observa = document.getElementById("obs").value;
+    var Rua = document.getElementById("Rua").value;
+    var Bairro = document.getElementById("Bairro").value;
+     resumo =
+     `
+     Olá!
+     _Segue o resumo do seu pedido:_
+     
+     🗒️ *Pedido Da Mesa:* _${mesa}_
+     ${formattedText}
+     
+
+     💰 *Subtotal:* R$ ${tot}
+     🚚 *Tempo de Entrega:* 20 minutos
+     💳 *Total a Pagar:* R$ ${preco}
+
+     OBS: _${observa}_
+     
+     Forma de Pagamento:
+     PIX
+     Credito ou Débito
+     _____________________________
+
+     Obrigado pela sua compra! 😊
+     _____________________________
+     `
+    
+    
+    var mensagem = encodeURIComponent(resumo);
+    var linkzap = `https://wa.me/5594984333958?text=${mensagem}`;
+    window.location.href = linkzap; 
+    removerChave('db_list');
+    console.log(resumo)
+  }
+
+
 function save(){
     const params = new URLSearchParams(window.location.search);
   const origem = params.get('utm_source');
@@ -497,47 +541,6 @@ car.style.display = 'none'
     console.log(resumo)
   }
 
-//   função que é chamda pelo Qr-code
-function QrCode(){
-    vix()
-    sairPopup()
-    formatarDados();
-    lerClient()
-    var preco = tot;
-    var observa = document.getElementById("obs").value;
-    var Rua = document.getElementById("Rua").value;
-    var Bairro = document.getElementById("Bairro").value;
-     resumo =
-     `
-     Olá!
-     _Segue o resumo do seu pedido:_
-     
-     🗒️ *Pedido Da Mesa:* _${mesa}_
-     ${formattedText}
-     
-
-     💰 *Subtotal:* R$ ${tot}
-     🚚 *Tempo de Entrega:* 20 minutos
-     💳 *Total a Pagar:* R$ ${preco}
-
-     OBS: _${observa}_
-     
-     Forma de Pagamento:
-     PIX
-     Credito ou Débito
-     _____________________________
-
-     Obrigado pela sua compra! 😊
-     _____________________________
-     `
-    
-    
-    var mensagem = encodeURIComponent(resumo);
-    var linkzap = `https://wa.me/5594984333958?text=${mensagem}`;
-    window.location.href = linkzap; 
-    removerChave('db_list');
-    console.log(resumo)
-  }
 
 
   // Adiciona destaque vermelho no texto do item correspondente à seção visível
