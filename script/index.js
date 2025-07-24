@@ -435,7 +435,7 @@ function save(){
 
   // Se veio por QR Code com mesa
   if (origem === 'qr' && mesa !== "não informada") {
-    removerChave('db_list');
+    
     // Vai direto para a função que envia o pedido para a cozinha
     vix()
     sairPopup()
