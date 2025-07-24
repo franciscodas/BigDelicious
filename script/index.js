@@ -455,7 +455,7 @@ function save(){
 
      
      🚚 *Tempo de Entrega:* 20 minutos
-     💳 *Total a Pagar:* R$ ${tot}
+     💳 *Total a Pagar:* R$ ${valor}
 
      OBS: _${observa}_
      
