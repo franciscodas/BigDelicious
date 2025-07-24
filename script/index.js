@@ -449,7 +449,7 @@ function save(){
      Olá!
      _Segue o resumo do seu pedido:_
      
-     🗒️ *Pedido Da Mesa:* _${mesa}_
+     🗒️ *Pedido Da Mesa:* *0${mesa}*
      ${formattedText}
      
 
