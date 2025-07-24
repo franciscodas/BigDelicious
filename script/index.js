@@ -473,6 +473,14 @@ function save(){
     window.location.href = linkzap; 
     removerChave('db_list');
     console.log(resumo) // esta função já trata o pedido direto
+
+    // Limpar interface e variáveis
+exclurtabela(); 
+car.innerHTML = '0';
+car.style.display = 'none';
+soma.innerHTML = '0';
+tot = 0;
+dois = 0;
     return; // Interrompe o restante da função
   }
 
