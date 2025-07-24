@@ -472,7 +472,7 @@ function save(){
     var mensagem = encodeURIComponent(resumo);
     var linkzap = `https://wa.me/5594984333958?text=${mensagem}`;
     window.location.href = linkzap; 
-    
+     removerChave('db_list');
     console.log(resumo) // esta função já trata o pedido direto
 
     // Limpar interface e variáveis
