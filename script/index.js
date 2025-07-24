@@ -449,7 +449,7 @@ function QrCode(){
 
      💰 *Subtotal:* R$ ${tot}
      🚚 *Tempo de Entrega:* 20 minutos
-     💳 *Total a Pagar:* R$ ${preco}
+     💳 *Total a Pagar:* R$ ${tot}
 
      OBS: _${observa}_
      
@@ -479,7 +479,44 @@ function save(){
   // Se veio por QR Code com mesa
   if (origem === 'qr' && mesa !== "não informada") {
     // Vai direto para a função que envia o pedido para a cozinha
-    QrCode(); // esta função já trata o pedido direto
+    vix()
+    sairPopup()
+    formatarDados();
+    lerClient()
+    var preco = tot;
+    var observa = document.getElementById("obs").value;
+    var Rua = document.getElementById("Rua").value;
+    var Bairro = document.getElementById("Bairro").value;
+     resumo =
+     `
+     Olá!
+     _Segue o resumo do seu pedido:_
+     
+     🗒️ *Pedido Da Mesa:* _${mesa}_
+     ${formattedText}
+     
+
+     💰 *Subtotal:* R$ ${tot}
+     🚚 *Tempo de Entrega:* 20 minutos
+     💳 *Total a Pagar:* R$ ${tot}
+
+     OBS: _${observa}_
+     
+     Forma de Pagamento:
+     PIX
+     Credito ou Débito
+     _____________________________
+
+     Obrigado pela sua compra! 😊
+     _____________________________
+     `
+    
+    
+    var mensagem = encodeURIComponent(resumo);
+    var linkzap = `https://wa.me/5594984333958?text=${mensagem}`;
+    window.location.href = linkzap; 
+    removerChave('db_list');
+    console.log(resumo) // esta função já trata o pedido direto
     return; // Interrompe o restante da função
   }
 
